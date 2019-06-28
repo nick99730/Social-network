@@ -1,0 +1,252 @@
+{% extends 'template.html' %}
+{% load staticfiles %}
+{% block title %}{{ person.first_name }} {{ person.last_name }}{% endblock %}
+{% block content %}
+    <div class="narrow_column_wrap">
+        <div class="narrow_column" id="narrow_column">
+            <div class="page_block page_photo">
+                <div class="page_avatar_wrap" id="page_avatar_wrap">
+                    <aside aria-label="Photo">
+                        <div id="page_avatar" class="page_avatar"><a id="profile_photo_link" href="https://vk.com"><img class="page_avatar_img" src="../{{ person.image.url }}" alt="{{ person.first_name }}  {{ person.last_name }}" width="200" height="200" /></a></div>
+                    </aside>
+                </div>
+                <aside aria-label="Profile actions">
+                    <div class="profile_actions">
+                        <div class="page_actions_wide clear_fix no_actions edit">
+                            <div class="page_action_left">
+                                <a id="profile_edit_act" href="{% url 'edit' person.id %}" class="flat_button button_wide secondary">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="page_block">
+                <aside aria-label="Friends ">
+                    <div class="module clear people_module _module" id="profile_friends">
+                        <a href="https://vk.com/feed?section=updates" class="header_right_link fl_r">updates </a>
+                        <a href="https://vk.com" class="module_header">
+                            <div class="header_top clear_fix">
+                                <span class="header_label fl_l">Friends </span>
+                                <span class="header_count fl_l">110</span>
+                            </div>
+                        </a>
+                        <div class="module_body clear_fix">
+                            <div class="people_row">
+                                <div class="people_cell">
+                                    <a class="people_cell_ava" href="https://vk.com" title="Maria">
+                                        <img class="people_cell_img" src="{% static "img_505096.png" %}" alt="Maria">
+                                        <span class="blind_label">.</span>
+                                    </a>
+                                    <div class="people_cell_name">
+                                        <a href="https://vk.com" title="Maria">Maria</a>
+                                    </div>
+                                </div>
+                                <div class="people_cell">
+                                    <a class="people_cell_ava" href="https://vk.com" title="Victor">
+                                        <img class="people_cell_img" src="{% static "boy-men-smile.png" %}" alt="Victor">
+                                        <span class="blind_label">.</span>
+                                    </a>
+                                    <div class="people_cell_name">
+                                        <a href="https://vk.com" title="Victor">Victor</a>
+                                    </div>
+                                </div>
+                                <div class="people_cell">
+                                    <a class="people_cell_ava" href="https://vk.com" title="Vladislav">
+                                        <img class="people_cell_img" src="{% static "boy-men-smile.png" %}" alt="Vladislav">
+                                        <span class="blind_label">.</span>
+                                    </a>
+                                    <div class="people_cell_name">
+                                        <a href="https://vk.com" title="Vladislav">Vladislav</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="people_row">
+                                <div class="people_cell">
+                                    <a class="people_cell_ava" href="https://vk.com" title="Daniil">
+                                        <img class="people_cell_img" src="{% static "boy-men-smile.png" %}" alt="Daniil">
+                                        <span class="blind_label">.</span>
+                                    </a>
+                                    <div class="people_cell_name">
+                                        <a href="https://vk.com" title="Daniil">Daniil</a>
+                                    </div>
+                                </div>
+                                <div class="people_cell">
+                                    <a class="people_cell_ava" href="https://vk.com" title="Natasha">
+                                        <img class="people_cell_img" src="{% static "img_505096.png" %}" alt="Natasha">
+                                        <span class="blind_label">.</span>
+                                    </a>
+                                    <div class="people_cell_name">
+                                        <a href="https://vk.com" title="Natasha">Natasha</a>
+                                    </div>
+                                </div>
+                                <div class="people_cell">
+                                    <a class="people_cell_ava" href="https://vk.com" title="Vladislav">
+                                        <img class="people_cell_img" src="{% static "boy-men-smile.png" %}" alt="Vladislav">
+                                        <span class="blind_label">.</span>
+                                    </a>
+                                    <div class="people_cell_name">
+                                        <a href="https://vk.com/id76430225" title="Vladislav">Vladislav</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <aside aria-label="Online friends">
+                    <div class="module clear people_module _module" id="profile_friends_online">
+                        <div class="header_right_link fl_r"></div>
+                            <a href="https://vk.com" class="module_header">
+                                <div class="header_top clear_fix">
+                                    <span class="header_label fl_l">Online friends</span>
+                                    <span class="header_count fl_l">4</span>
+                                </div>
+                            </a>
+                            <div class="module_body clear_fix">
+                                <div class="people_row">
+                                    <div class="people_cell">
+                                        <a class="people_cell_ava" href="https://vk.com" title="Andrey">
+                                            <img class="people_cell_img" src="{% static "boy-men-smile.png" %}" alt="Andrey">
+                                            <span class="blind_label">.</span>
+                                        </a>
+                                        <div class="people_cell_name">
+                                            <a href="https://vk.com" title="Andrey">Andrey</a>
+                                        </div>
+                                    </div>
+                                    <div class="people_cell">
+                                        <a class="people_cell_ava" href="https://vk.com" title="Nastya">
+                                            <img class="people_cell_img" src="{% static "img_505096.png" %}" alt="Nastya">
+                                            <span class="blind_label">.</span>
+                                        </a>
+                                        <div class="people_cell_name">
+                                            <a href="https://vk.com" title="Nastya">Nastya</a>
+                                        </div>
+                                    </div>
+                                    <div class="people_cell">
+                                        <a class="people_cell_ava" href="https://vk.com" title="Vladislav">
+                                            <img class="people_cell_img" src="{% static "boy-men-smile.png" %}" alt="Vladislav">
+                                            <span class="blind_label">.</span>
+                                        </a>
+                                        <div class="people_cell_name">
+                                            <a href="https://vk.com" title="Vladislav">Vladislav</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="people_row">
+                                <div class="people_cell">
+                                    <a class="people_cell_ava" href="https://vk.com" title="Egor">
+                                        <img class="people_cell_img" src="{% static "boy-men-smile.png" %}" alt="Egor" >
+                                        <span class="blind_label">.</span>
+                                    </a>
+                                    <div class="people_cell_name">
+                                        <a href="https://vk.com/franki357" title="Egor">Egor</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <div class="wide_column_wrap" id="main_page">
+        <div class="wide_column fl_r" id="wide_column">
+            <div class="page_block" >
+                <div id="page_info_wrap" class="page_info_wrap ">
+                    <div class="page_top">
+                        <h2 class="page_name">{{ person.first_name }}  {{ person.last_name }}</h2>
+                        <div class="page_current_info" id="page_current_info">
+                            <div id="currinfo_editor" class="page_status_editor clear">
+                                <div id="currinfo_wrap" tabindex="0" role="button">
+                                    <span id="current_info" class="current_info">
+                                        <span class="my_current_info">
+                                            <span class="current_text">To the Moon&#33;</span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile_info profile_info_short" id="profile_short">
+                        <div class="clear_fix profile_info_row ">
+                            <div class="label fl_l">Birthday:</div>
+                            <div class="labeled">
+                                <a href="https://vk.com/search?c[section]=people&c[bday]={{ person.date_of_birth.day }}&c[bmonth]={{ person.date_of_birth.month }}">{{month}} {{ person.date_of_birth.day }}</a>,
+                                <a href="https://vk.com/search?c[section]=people&c[byear]={{ person.date_of_birth.year }}">{{ person.date_of_birth.year }}</a>
+                            </div>
+                        </div>
+                        <div class="clear_fix profile_info_row ">
+                            <div class="label fl_l">Current city:</div>
+                            <div class="labeled">
+                                <a href="https://vk.com/search?c[name]=0&c[section]=people&c[country]=3&c[city]=282">{{ person.current_city }}</a>
+                            </div>
+                        </div>
+                        <div class="profile_more_info">
+                            <div class="profile_more_info_link" >
+                                <span id="profile_label_more" class="profile_label_more">Show full information</span>
+                            </div>
+                        </div>
+                        <div class="profile_info profile_info_full" id="profile_full">
+                            <div class="profile_info_block clear_fix">
+                                <div class="profile_info_header_wrap">
+                                    <span class="profile_info_header">Main information</span>
+                                </div>
+                                <div class="profile_info">
+                                    <div class="clear_fix profile_info_row ">
+                                        <div class="label fl_l">Sex:</div>
+                                        <div class="labeled">
+                                            <a href="#">{{ person.sex }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="counts_module">
+                    <a class="page_counter" href="https://vk.com">
+                        <div class="count">110</div>
+                        <div class="label">friends</div>
+                    </a>
+                    <a class="page_counter" href="#">
+                        <div class="count">54</div>
+                        <div class="label">followers</div>
+                    </a>
+                    <a class="page_counter" href="https://vk.com">
+                        <div class="count">17</div>
+                        <div class="label">photos</div>
+                    </a>
+                    <a class="page_counter" href="https://vk.com">
+                        <div class="count">152</div>
+                        <div class="label">videos</div>
+                    </a>
+                    <a class="page_counter" href="https://vk.com">
+                        <div class="count">276</div>
+                        <div class="label">audio files</div>
+                    </a>
+                </div>
+            </div>
+            <div class="page_block" >
+                <div class="module clear photos_module" id="profile_photos_module">
+                    <div class="header_right_link fl_r"></div>
+                    <a href="https://vk.com/albums175138192" class="module_header">
+                        <div class="header_top clear_fix">
+                            <span class="header_label fl_l">My photos</span>
+                            <span class="header_count fl_l">17</span>
+                        </div>
+                    </a>
+                    <div id="page_photos_module" class="page_photos_module">
+                        <a class="page_square_photo crisp_image" href="https://vk.com/photo175138192_456239287?all=1" style="background-image: url(https://pp.userapi.com/c848624/v848624787/2159f/xnkxB7nmekI.jpg)" aria-label="photo"></a>
+                        <a class="page_square_photo crisp_image" href="https://vk.com/photo175138192_428989285?all=1" style="background-image: url(https://pp.userapi.com/c847019/v847019978/201a92/Oyc3aCUX5lw.jpg)" aria-label="photo"></a>
+                        <a class="page_square_photo crisp_image" href="https://vk.com/photo175138192_456239187?all=1" style="background-image: url(https://pp.userapi.com/c837635/v837635816/5d16f/9oXLEQ4_ot8.jpg)" aria-label="4k&amp;#128176;"></a>
+                        <a class="page_square_photo crisp_image" href="https://vk.com/photo175138192_456239158?all=1" style="background-image: url(https://pp.userapi.com/c638931/v638931192/41039/gXw592SFGJs.jpg)" aria-label="А3-13"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="page_block">
+                <div class="footer">
+                    <h5>Dev by N.G.2019</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

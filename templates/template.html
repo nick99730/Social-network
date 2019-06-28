@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <title>{% block title %}Nikolay Grigoryev{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+</head>
+<div id="page_header">
+    <div class="container">
+        <div id="top_nav" class="row head_nav mx-2 d-flex align-items-center">
+            <div class="col-md col-lg-4 head_nav_item">
+                <a class="top_home_link d-flex justify-content-end align-items-center" href="https://vk.com/n.grigoryev99730" aria-label="HOME">
+                    <div class="top_home_logo">N.Grigoryev</div>
+                </a>
+            </div>
+            <div class="col-md col-lg-3 head_nav_item">
+                <div id="ts_wrap" class="ts_wrap">
+                    <input type="text" class="text ts_input" id="ts_input" name="disable-autofill" placeholder="Search" aria-label="Search" />
+                </div>
+            </div>
+            <div class="col-md col-lg-2 head_nav_item head_nav_btns">
+                <a id="top_notify_btn" class="top_nav_btn" href="https://vk.com/feed?section=notifications">
+                    <div class="top_nav_btn_icon"></div>
+                </a>
+                <span id="top_audio_layer_place"></span>
+                <div id="top_audio_btn_group" class="top_nav_btn_audio_group">
+                    <a id="top_audio" class="top_nav_btn top_nav_audio_btn" href="https://vk.com/music" aria-label="Audio player">
+                        <div class="top_nav_btn_icon"></div>
+                    </a>
+                </div>
+                <div class="top_audio_play" id="top_audio_play">
+                    <button class="top_audio_play__button" aria-label="Play" >
+                        <span>
+                            <img id="audio-button" src="{% static 'Play.png' %}" alt="" width="7px" height="10px">
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md col-lg-3 head_nav_item">
+                <div id="top_profile_link" class="top_nav_link top_profile_link">
+                    <div class="top_profile_name">Nikolay</div>
+                    <img class="top_profile_img" src="https://pp.userapi.com/c626230/v626230192/515ca/DIO_Rg6BmQg.jpg?ava=1" alt="Nikolay" />
+                    <i class="top_profile_arrow fas fa-angle-down"></i>
+                </div>
+                <div id="top_profile_menu" class="">
+                    <a class="top_profile_mrow" id="top_myprofile_link" href="https://vk.com/n.grigoryev99730">My profile</a>
+                    <div class="top_profile_sep" style=""></div>
+                    <a class="top_profile_mrow" id="top_edit_link" href="https://vk.com/edit">Edit</a>
+                    <a class="top_profile_mrow" id="top_settings_link" href="https://vk.com/settings">Settings</a>
+                    <a class="top_profile_mrow" id="top_support_link" href="https://vk.com/support?act=home">Support</a>
+                    <div class="top_profile_sep" style=""></div>
+                    <a class="top_profile_mrow" id="top_logout_link" href="https://login.vk.com">Log out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="page_layout">
+    <div id="side_bar" class="side_bar fl_l " style="">
+        <div id="side_bar_inner" class="side_bar_inner">
+            <nav>
+                <ol>
+                    <li id="l_pr" class="">
+                        <a href="{% url 'main_page' person.id %}" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">My Profile</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_nwsf" class="">
+                        <a href="https://vk.com/feed" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">News</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_msg" class="">
+                        <a href="https://vk.com/im" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Messages</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_fr" class="">
+                        <a href="https://vk.com/friends" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Friends</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_gr" class="">
+                        <a href="https://vk.com/groups" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Communities</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_ph" class="">
+                        <a href="https://vk.com/albums175138192" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Photos</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_aud" class="">
+                        <a href="https://vk.com/audios175138192" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Music</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_vid" class="">
+                        <a href="https://vk.com/video" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Videos</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_ap" class="">
+                        <a href="https://vk.com/apps" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Games</span>
+                            </span>
+                        </a>
+                    </li>
+                    <div class="more_div l_main"></div>
+                    <li id="l_vkp" class="">
+                        <a href="https://vk.com/vkpay" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">VK Pay</span>
+                            </span>
+                        </a>
+                    </li>
+                    <div class="more_div"></div>
+                    <li id="l_mk" class="">
+                        <a href="https://vk.com/market" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Market</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li id="l_doc" class="">
+                        <a href="https://vk.com/docs" class="left_row">
+                            <span class="left_fixer">
+                                <span class="left_icon fl_l"></span>
+                                <span class="left_label inl_bl">Documents</span>
+                            </span>
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="left_menu_nav_wrap">
+                <a class="left_menu_nav" href="https://vk.com/blog">Blog</a>
+                <a class="left_menu_nav" href="https://vk.com/dev">Developers</a>
+                <a class="left_menu_nav" href="https://vk.com/about">About</a>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
+{% block extrahead %}
+<script type="text/javascript" src="{% static 'scripts.js' %}"></script>
+{% endblock extrahead %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{% extends 'template.html' %}
+{% load widget_tweaks %}
+{% block title %}Edit my profile{% endblock %}
+{% block content %}
+<div class="wide_column_left">
+  <div class="narrow_column_wrap">
+      <div class="narrow_column fixed" id="narrow_column" style="margin-left: 0px">
+        <div class="narrow_column">
+            <div class="page_block ui_rmenu ui_rmenu_pr" role="list">
+                  <a id="ui_rmenu_general" href="https://vk.com/edit" class="ui_rmenu_item _ui_item_general ui_rmenu_item_sel">
+                      <span>Basic info</span>
+                  </a>
+                  <a id="ui_rmenu_contacts" href="https://vk.com/edit?act=contacts" class="ui_rmenu_item _ui_item_contacts">
+                      <span>Contact info</span>
+                  </a>
+                  <a id="ui_rmenu_interests" href="https://vk.com/edit?act=interests" class="ui_rmenu_item _ui_item_interests">
+                      <span>Interests</span>
+                  </a>
+                  <a id="ui_rmenu_education" href="https://vk.com/edit?act=education" class="ui_rmenu_item _ui_item_education">
+                      <span>Education</span>
+                  </a>
+                  <a id="ui_rmenu_career" href="https://vk.com/edit?act=career" class="ui_rmenu_item _ui_item_career">
+                      <span>Work</span>
+                  </a>
+                  <a id="ui_rmenu_military" href="https://vk.com/edit?act=military" class="ui_rmenu_item _ui_item_military">
+                      <span>Military service</span>
+                  </a>
+                  <a id="ui_rmenu_personal" href="https://vk.com/edit?act=personal" class="ui_rmenu_item _ui_item_personal">
+                      <span>Personal views</span>
+                  </a>
+                  <div class="ui_rmenu_slider _ui_rmenu_slider"></div>
+            </div>
+        </div>
+      </div>
+  </div>
+      <div class="wide_column_wrap">
+            <div class="wide_column" id="wide_column">
+                <div id="profile_editor" class="page_block clear-fixed">
+                    <div class="page_block_header">
+                        Basic info
+                    </div>
+                    <div id="pedit_result" class="pedit_result"></div>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <div id="pedit_general" class="pedit_content">
+                            <div class="pedit_row clear_fix">
+                                <div class="pedit_label">First name:</div>
+                                <div class="pedit_labeled">
+                                   {% render_field form.first_name class="dark full"  id="pedit_first_name" %}
+                                </div>
+                            </div>
+                            <div class="pedit_row clear_fix">
+                                <div class="pedit_label">Last name:</div>
+                                <div class="pedit_labeled">
+                                    {% render_field form.last_name class="dark full"  id="pedit_last_name" %}
+                                </div>
+                            </div>
+                            <div class="pedit_row clear_fix">
+                                <div class="pedit_label">Sex:</div>
+                                <div class="pedit_labeled">
+                                    {% render_field form.sex class="dark full" %}
+                                </div>
+                            </div>
+                            <div class="pedit_row clear-fixed _birthday_settings">
+                                <div class="pedit_label">Birthday:</div>
+                                <div class="pedit_labeled" id="date_edit">
+                                    {% render_field form.date_of_birth  class="dark" %}
+                                </div>
+                            </div>
+                            <div class="pedit_row clear_fix">
+                                <div class="pedit_label">Current city:</div>
+                                <div class="pedit_labeled">
+                                    {% render_field form.current_city class="dark full"  id="pedit_home_town" %}
+                                </div>
+                            </div>
+                            <div class="pedit_row clear_fix">
+                                <div class="pedit_label">Change photo:</div>
+                                <div class="pedit_labeled">
+                                   <div class="input-group" style="width: 300px">
+                                        <div class="custom-file">
+                                            <label for="file_input">Browse</label>
+                                            {% render_field form.ava_photo class="file_input" id="file_input" %}
+                                            <input type="hidden" id="ava_photo" name="ava_photo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pedit_separator"></div>
+                            <div class="pedit_controls clear_fix text-center">
+                                <input type="submit" value="Save" class="flat_button button_big_width">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

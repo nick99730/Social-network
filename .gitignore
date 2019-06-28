@@ -1,0 +1,7 @@
+*.pyc
+db.sqlite3
+venv/
+log_pass.txt
+.idea/
+Social network/settings/local.py
+static/admin
