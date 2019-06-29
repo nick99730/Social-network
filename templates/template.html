@@ -49,13 +49,13 @@
                     <img class="top_profile_img" src="https://pp.userapi.com/c626230/v626230192/515ca/DIO_Rg6BmQg.jpg?ava=1" alt="Nikolay" />
                     <i class="top_profile_arrow fas fa-angle-down"></i>
                 </div>
-                <div id="top_profile_menu" class="">
+                <div id="top_profile_menu">
                     <a class="top_profile_mrow" id="top_myprofile_link" href="https://vk.com/n.grigoryev99730">My profile</a>
-                    <div class="top_profile_sep" style=""></div>
+                    <div class="top_profile_sep"></div>
                     <a class="top_profile_mrow" id="top_edit_link" href="https://vk.com/edit">Edit</a>
                     <a class="top_profile_mrow" id="top_settings_link" href="https://vk.com/settings">Settings</a>
                     <a class="top_profile_mrow" id="top_support_link" href="https://vk.com/support?act=home">Support</a>
-                    <div class="top_profile_sep" style=""></div>
+                    <div class="top_profile_sep"></div>
                     <a class="top_profile_mrow" id="top_logout_link" href="https://login.vk.com">Log out</a>
                 </div>
             </div>
@@ -177,10 +177,9 @@
     {% block content %}
     {% endblock %}
 </div>
-{% block extrahead %}
+<script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'ajax.js' %}"></script>
 <script type="text/javascript" src="{% static 'scripts.js' %}"></script>
-{% endblock extrahead %}
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>

@@ -153,16 +153,9 @@ input.text.ts_input::placeholder{
     display: inline-block;
     vertical-align: top;
 }
-#top_profile_menu.shown {
-    visibility: visible;
-    opacity: 1;
-    filter: none;
-    top: 48px;
-    pointer-events: auto;
-}
+
 #top_profile_menu {
     position: absolute;
-    visibility: hidden;
     width: 160px;
     top: 58px;
     right: 80px;
@@ -172,7 +165,7 @@ input.text.ts_input::placeholder{
     padding: 4px 0;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-    opacity: 0;
+    opacity: 1;
 }
 .top_profile_mrow {
     display: block;
@@ -741,7 +734,7 @@ input.dark, #profile_editor select.dark {
     margin: 0;
     border: 1px solid #d3d9de;
 }
-.fakeinput, div[contenteditable=true], input.big_text, input.file, input.search, input.text, input[type=button], input[type=password], input[type=search], input[type=submit], input[type=text], input[type~=email], input[type~=password], input[type~=search], input[type~=text], textarea {
+.fakeinput, .flat_button,div[contenteditable=true], input.big_text, input.file, input.search, input.text, input[type=button], input[type=password], input[type=search], input[type=submit], input[type=text], input[type~=email], input[type~=password], input[type~=search], input[type~=text], textarea {
     font-size: 13px;
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
     outline: none;
@@ -870,4 +863,46 @@ input[type="file"]:focus{
 }
 #ava_photo{
     opacity: 0;
+}
+.pedit_result .msg {
+    margin: 15px 15px 20px;
+}
+.box_msg, .box_msg_gray, .msg {
+    background-color: #f0f2f5;
+    -o-transition: background-color 2s linear;
+    transition: background-color 2s linear;
+}
+.error, .info_msg, .ok_msg {
+    min-height: 40px;
+    line-height: 38px;
+}
+.box_error, .box_msg, .box_msg_gray, .error, .info_msg, .msg, .ok_msg {
+    padding: 7px 18px 9px;
+    margin: 15px 20px;
+    border: 1px solid #c1c9d9;
+    border-radius: 2px;
+    line-height: 150%;
+}
+.msg_text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 150%;
+}
+b, strong {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+b {
+    font-weight: bold;
+}
+.ok_msg {
+    background: #effaed url(../static/msg_ok.png) no-repeat 12px 12px;
+    padding-left: 55px;
+    border-color: #afd4a9;
+}
+#pedit_result{
+    display: none;
+}
+.top_menu_shn{
+    display: block;!important;
 }
