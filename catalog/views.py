@@ -26,13 +26,15 @@ def model_form_edit(request, person_id):
             if request.FILES.get('ava_photo'):
                 person.image = form.files["ava_photo"]
             person.save()
-    else:
-        form = PersonEditForm(initial={'first_name': person.first_name,
-                                       'last_name': person.last_name,
-                                       'sex': person.sex,
-                                       'date_of_birth': person.date_of_birth,
-                                       'current_city': person.current_city,
-                                       'ava_photo': person.image})
+        context = {"form": form,
+                   "person": person}
+        return render(request, 'form.html', context)
+    form = PersonEditForm(initial={'first_name': person.first_name,
+                                   'last_name': person.last_name,
+                                   'sex': person.sex,
+                                   'date_of_birth': person.date_of_birth,
+                                   'current_city': person.current_city,
+                                   'ava_photo': person.image})
     context = {"form": form,
                "person": person}
     return render(request, 'form.html', context)

@@ -165,7 +165,6 @@ input.text.ts_input::placeholder{
     padding: 4px 0;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-    opacity: 1;
 }
 .top_profile_mrow {
     display: block;
@@ -903,6 +902,10 @@ b {
 #pedit_result{
     display: none;
 }
-.top_menu_shn{
-    display: block;!important;
+#error_message{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: red;
+    text-align: center;
+    height: 60px;
 }

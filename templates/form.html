@@ -47,9 +47,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div id="error_message" class="justify-content-center align-items-center" style="display: none">
+                        </div>
                         <form action="" id="form1" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {{ form.non_field_errors }}
                             <div id="pedit_general" class="pedit_content">
                                 <div class="pedit_row clear_fix">
                                     <div class="pedit_label">First name:</div>
