@@ -16,8 +16,6 @@ python manage.py migrate
 python manage.py collectstatic
 python manage.py runserver # starts the server 
 ```
-
-To access my page, add "/ 2" at the end of the URL. 
 To edit personal data, click the "Edit" button under the photo.
 
 ## Requirements
