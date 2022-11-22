@@ -1,4 +1,4 @@
 Django==2.0.1
 django-multiselectfield==0.1.8
 django-widget-tweaks==1.4.3
-Pillow==5.0.0
+Pillow==9.3.0
